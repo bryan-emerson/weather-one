@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Weather from './components/weather';
+import Card from 'react-bootstrap/Card'
 import './App.css';
 
 
@@ -21,7 +22,7 @@ function App() {
         .then(res => res.json())
         .then(result => {
           setData(result)
-          console.log(result.visibility);
+          console.log(result);
         });
     }
     fetchData();
@@ -33,7 +34,7 @@ function App() {
       {(typeof data.main != 'undefined') ? (
         <Weather weatherData={data}/>
       ): (
-        <div>crazy</div>
+        <Card body>Your Weather Data is Loading!</Card>
 
       )}
 
