@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: grey;
 }
 
 .App-logo {
@@ -25,17 +26,19 @@
 }
 
 .container {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .App-link {
   color: #61dafb;
 }
-.card {
+/* .card {
   border: 3px solid black;
   width: 50vw;
-}
+} */
 
 @keyframes App-logo-spin {
   from {

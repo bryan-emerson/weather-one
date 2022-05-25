@@ -17,11 +17,11 @@ export default function Weather(props) {
                 <p>Conditions: {props.weatherData.weather[0].main} </p>
                 <p>Visibility: {props.weatherData.visibility} </p>
                 <p>Current Temp: {props.weatherData.main.temp} &deg;C</p>
-                <p>Feels like: {props.weatherData.main.feels_like} &deg;C</p>
+                <p>Feels like: <br></br>{props.weatherData.main.feels_like} &deg;C</p>
               </div>
               <div className="column">
-                <p>Today's High Temp: {props.weatherData.main.temp_max} &deg;C</p>
-                <p>Today's Low Temp: {props.weatherData.main.temp_min} &deg;C</p>
+                <p>Today's High: {props.weatherData.main.temp_max} &deg;C</p>
+                <p>Today's Low: <br></br>{props.weatherData.main.temp_min} &deg;C</p>
                 <p>Dewpoint: {props.weatherData.main.humidity} </p>
                 <p>Wind: {props.weatherData.wind["speed"]} </p>
               </div>
