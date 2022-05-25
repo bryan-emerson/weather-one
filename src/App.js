@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Weather from './components/weather';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 import './App.css';
 
 
@@ -30,14 +31,15 @@ function App() {
 
   return (
     <div className="App">
+      <Container className="container" fluid>
 
-      {(typeof data.main != 'undefined') ? (
-        <Weather weatherData={data}/>
-      ): (
-        <Card body>Your Weather Data is Loading!</Card>
+        {(typeof data.main != 'undefined') ? (
+          <Weather weatherData={data} />
+        ) : (
+          <Card body>Your Weather Data is Loading!</Card>
 
-      )}
-
+        )}
+      </Container>
     </div>
   );
 }
