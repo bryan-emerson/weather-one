@@ -1,7 +1,7 @@
 .card {
   border: 3px solid black;
   border-radius: 8px;
-  width: 90vw;
+  width: 50vw;
   background-color: teal;
   color: white;
 }
@@ -13,9 +13,12 @@
   flex: auto;
   border: 1px solid red;
   border-radius: 8px;
+  margin: 5px;
+  background-color: turquoise;
 }
 
 .row {
   display:flex;
   flex-direction: row;
 }
+

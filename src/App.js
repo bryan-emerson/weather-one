@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Weather from './components/weather';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
+import Spinner from 'react-bootstrap/Spinner';
 import './App.css';
 
 
@@ -36,8 +37,10 @@ function App() {
         {(typeof data.main != 'undefined') ? (
           <Weather weatherData={data} />
         ) : (
-          <Card body>Your Weather Data is Loading!</Card>
-
+          <>
+            <Card body>Your Weather Data is Loading!</Card>
+            <br/><Spinner animation="border" />
+          </>
         )}
       </Container>
     </div>
