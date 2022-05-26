@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: grey;
+  background: linear-gradient(rgb(67, 95, 101), rgb(187, 187, 195), rgb(67, 95, 101));
 }
 
 .App-logo {
