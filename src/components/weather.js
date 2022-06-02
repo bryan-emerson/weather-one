@@ -15,16 +15,16 @@ export default function Weather(props) {
           <Card.Text>
             <div className="row">
               <div className="column">
-                <p>Conditions: <br />{props.weatherData.weather[0].main} </p>
+                <p>Conditions: <br />{props.weatherData.weather[0].description} </p>
                 <p>Visibility: <br />{props.weatherData.visibility} ft </p>
                 <p>Current Temp: <br />{Math.floor((props.weatherData.main.temp)*1.8+32)} &deg;F</p>
-                <p>Feels like: <br />{props.weatherData.main.feels_like} &deg;C</p>
+                <p>Feels like: <br />{Math.floor((props.weatherData.main.feels_like)*1.8+32)} &deg;F</p>
               </div>
               <div className="column">
                 <p>Today's High: <br />{Math.floor((props.weatherData.main.temp_max)*1.8+32)} &deg;F</p>
                 <p>Today's Low: <br />{Math.floor((props.weatherData.main.temp_min)*1.8+32)} &deg;F</p>
                 <p>Dewpoint: <br />{props.weatherData.main.humidity} </p>
-                <p>Wind: <br />{props.weatherData.wind["speed"]} </p>
+                <p>Wind: <br />{Math.floor((props.weatherData.wind.speed) * 2.237)} Mph </p>
               </div>
             </div>
           </Card.Text>
