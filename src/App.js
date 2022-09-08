@@ -18,9 +18,11 @@ function App() {
       navigator.geolocation.getCurrentPosition(function (position) {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
+        console.log("Latitude is:", lat)
+        console.log("Longitude is:", long)
       });
 
-      await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
+      await fetch(`${process.env.REACT_APP_API_URL}?lat=${lat}&lon=${long}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
         .then(res => res.json())
         .then(result => {
           setData(result)
@@ -35,7 +37,7 @@ function App() {
       <Container className="container" fluid>
 
         {(typeof data.main != 'undefined') ? (
-          <Weather weatherData={data} />
+          <Weather weatherData={data} lat={lat} long={long}/>
         ) : (
           <>
             <Card body>Your Weather Data is Loading!</Card>

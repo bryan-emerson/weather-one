@@ -28,7 +28,7 @@ export default function Weather(props) {
               </div>
             </div>
           </Card.Text>
-          <Card.Link href="#">Card Link</Card.Link>
+          <Card.Link href={`https://darksky.net/forecast/${props.lat},${props.long}/us12/en`}>View on Web</Card.Link>
         </Card.Body>
       </Card>
     </div>
