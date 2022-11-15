@@ -8,7 +8,7 @@ Welcome to the web’s brand new lightweight weather app!
 
 This React app renders functional components, and uses hooks for state management. Props pass data back and forth. React was chosen for its lightning fast virtual dom, which re-renders only necessary elements, greatly improving app performance.
 
-The useEffect hook calls navigator.geolocation.getCurrentPosition() when the page loads to determine the user’s location. A fetch call to the Open Weather API is made and hooks are used to set the returned data to state. Conditional rendering shows a loading message until the weather app UI renders.  A link at the bottom of the app will programmatically make a search string for the dark skies website with the user’s geolocation, and take users to a more in-depth weather data site.
+The useEffect hook calls ```navigator.geolocation.getCurrentPosition()``` when the page loads to determine the user’s location. A fetch call to the Open Weather API is made and hooks are used to set the returned data to state. Conditional rendering shows a loading message until the weather app UI renders.  A link at the bottom of the app will programmatically make a search string for the dark skies website with the user’s geolocation, and take users to a more in-depth weather data site.
 
 ## Installation
 
