@@ -50,4 +50,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Repo: https://github.com/bryan-emerson/weather-one
 
-Deployed Site: https://gorgeous-garden.surge.sh/
+Deployed Site: https://unused-earthquake.surge.sh/
