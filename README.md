@@ -2,7 +2,7 @@
 
 Welcome to the web’s brand new lightweight weather app!
 
-![user view](./src/components/Image/userView.png)
+![user view](./src/Weather.png)
 
 ## Technology Used
 
