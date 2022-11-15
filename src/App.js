@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Weather from './components/weather';
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Spinner from 'react-bootstrap/Spinner';
 import './App.css';
@@ -18,15 +17,15 @@ function App() {
       navigator.geolocation.getCurrentPosition(function (position) {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
-        console.log("Latitude is:", lat)
-        console.log("Longitude is:", long)
+        //console.log("Latitude is:", lat)
+        //console.log("Longitude is:", long)
       });
 
       await fetch(`${process.env.REACT_APP_API_URL}?lat=${lat}&lon=${long}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
         .then(res => res.json())
         .then(result => {
           setData(result)
-          console.log(result);
+          //console.log(result);
         });
     }
     fetchData();
@@ -37,12 +36,11 @@ function App() {
       <Container className="container" fluid>
 
         {(typeof data.main != 'undefined') ? (
-          <Weather weatherData={data} lat={lat} long={long}/>
+          <Weather weatherData={data} lat={lat} long={long} />
         ) : (
-          <>
-            <Card body>Your Weather Data is Loading!</Card>
-            <br/><Spinner animation="border" />
-          </>
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Your Weather Data Is Loading...</span>
+          </Spinner>
         )}
       </Container>
     </div>
